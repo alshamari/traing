@@ -1,0 +1,14 @@
+node {
+	def app
+	
+	stage('clone repositry'){
+	checkout scm
+	}
+	
+	stage('helo world'){
+	app=echo "hello world"
+	}
+
+	stage('push'){
+	app.push
+	}
