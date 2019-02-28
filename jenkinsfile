@@ -1,13 +1,3 @@
-pipeline {
-    agent any
-    stages {
-        stage('Some Stage') {
-            steps {
-                script{
-                    file = new File('./ci/new_file.txt').text
-                    file.createNewFile()
-                }
-            }
-        }
-    }
+node {
+   echo 'Hello World'
 }
