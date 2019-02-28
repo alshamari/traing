@@ -1,9 +1,12 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Some Stage') {
             steps {
-                sh 'python --version'
+                script{
+                    file = new File('./ci/new_file.txt').text
+                    file.createNewFile()
+                }
             }
         }
     }
