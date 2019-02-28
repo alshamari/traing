@@ -10,14 +10,14 @@ node {
     stage('Build image') {
     
 
-        app = echo "hello world"
+        app = echo 'hello world'
     }
 
     stage('Push image') {
      
 
          
-            app.push("latest")
+            app.push
         
     }
 }
