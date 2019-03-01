@@ -1,25 +1,14 @@
 pipeline {
-   ageny any {
-   stages {
-      stage('clone') {
-         steps{
-            checkout scm
-            }
-         }
-      stage('bulid') {
-         steps {
-             bat "mvn clean"
+    agent any
+    stages {
+        stage('Some Stage') {
+            steps {
+                script{
+                    file = new File('./ci/new_file.txt').text
+                    file.createNewFile()
+                }
             }
         }
-        stage('test') {
-            steps {
-                  bat "mvn test"
-               }
-         }
-         stage('deploy') {
-            steps {
-                  bat "mvn package"
-               }
-            }
-         }
+    }
 }
+
