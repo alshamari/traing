@@ -2,7 +2,9 @@ pipeline {
    ageny any {
    stages {
       stage('clone') {
+         steps{
          checkout scm
+         }
       stage('bulid') {
          steps {
              bat "mvn clean"
@@ -18,5 +20,6 @@ pipeline {
                   bat "mvn package"
                }
             }
-       }
+         }
+      }
 }
