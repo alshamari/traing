@@ -1,3 +1,20 @@
-node {
-   echo 'Hello World'
+pipeline {
+   ageny any {
+   stages {
+      stage('bulid') {
+         steps {
+             bat "mvn clean"
+            }
+        }
+        stage('test') {
+            steps {
+                  bat "mvn test"
+               }
+         }
+         stage('deploy') {
+            steps {
+                  bat "mvn package"
+               }
+            }
+       }
 }
