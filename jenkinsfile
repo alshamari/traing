@@ -1,6 +1,8 @@
 pipeline {
    ageny any {
    stages {
+      stage('clone') {
+         checkout scm
       stage('bulid') {
          steps {
              bat "mvn clean"
