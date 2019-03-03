@@ -1,20 +1,23 @@
-pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      steps {
-        echo'Hello'
-      }
+pipeline{
+    agent any
+    stages {
+        stage('bulid'){
+            steps{
+               bat "git clone https://github.com/alshamari/traing.git" 
+            }
+            
+        }
+        stage('Test'){
+            steps{
+                 echo "Hello World"
+            }
+           
+        }
+        stage('Deploy'){
+            steps{
+                echo "Hello World" 
+            }
+           
+        }
     }
-    stage('Test') {
-      steps {
-       echo "Wrold"
-      }
-    }
-    stage('Deploy') {
-      steps {
-       echo "ahmed"
-      }
-    }
-  }
 }
