@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage('bulid'){
             steps{
-               bat "git clone https://github.com/alshamari/traing.git" 
+               sh "git clone https://github.com/alshamari/traing.git" 
             }
             
         }
