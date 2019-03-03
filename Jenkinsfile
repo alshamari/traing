@@ -3,19 +3,19 @@ pipeline{
     stages {
         stage('bulid'){
             steps{
-               sh "mvn clean" 
+               sh "git clone https://github.com/alshamari/traing.git/" 
             }
             
         }
         stage('Test'){
             steps{
-                 echo "mvn test"
+                 echo "hello"
             }
            
         }
         stage('Deploy'){
             steps{
-                echo "mvn package" 
+                echo "hello" 
             }
            
         }
