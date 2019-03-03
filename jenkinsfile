@@ -1,14 +1,20 @@
 pipeline {
-    agent any
-    stages {
-        stage('Some Stage') {
-            steps {
-                script{
-                    file = new File('./ci/new_file.txt').text
-                    file.createNewFile()
-                }
-            }
-        }
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        echo'Hello'
+      }
     }
+    stage('Test') {
+      steps {
+       echo "Wrold"
+      }
+    }
+    stage('Deploy') {
+      steps {
+       echo "ahmed"
+      }
+    }
+  }
 }
-
